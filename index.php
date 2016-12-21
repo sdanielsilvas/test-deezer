@@ -14,7 +14,7 @@
 
 		DZ.init({
 			appId  : '218204',
-			channelUrl : 'http://immense-woodland-64988.herokuapp.com/',
+			channelUrl : 'https://immense-woodland-64988.herokuapp.com/',
 			player: {
 				onload: function (response) {
 					console.log('estamos ready', response);
