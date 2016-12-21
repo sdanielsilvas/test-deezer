@@ -9,6 +9,7 @@
 	<input type="button" onclick="DZ.player.playAlbum(6125830);" value="Play"/>
 	<input type="button" onclick="login()" value="Login1"/>
 	<input type="button" onclick="getPlaylists()" value="playlist"/>
+	<input type="button" onclick="getFavorites()" value="favoritas"/>
 	<input type="button" onclick="DZ.logout()" value="logout"/>
 	<script>
 
@@ -36,6 +37,12 @@
 		function getPlaylists(){
 			DZ.api('/user/me/playlists',function(response){
 				console.log("las play list");
+				console.log(response);
+			})
+		}
+		function getFavorites(){
+			DZ.api('/user/me/tracks',function(response){
+				console.log("las favoritas");
 				console.log(response);
 			})
 		}
