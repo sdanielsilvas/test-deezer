@@ -8,7 +8,7 @@
 	<div id='dz-root'></div>
 	<input type="button" onclick="DZ.player.playAlbum(6125830);" value="Play"/>
 	<input type="button" onclick="login()" value="Login1"/>
-	<input type="button" onclick="DZ.login()" value="Login2"/>
+	<input type="button" onclick="getPlaylists()" value="playlist"/>
 	<input type="button" onclick="DZ.logout()" value="logout"/>
 	<script>
 
@@ -31,6 +31,13 @@
 				console.log("el response del login");
 				console.log(response);
 			});
+		}
+
+		function getPlaylists(){
+			DZ.api('/user/me/playlists',function(response){
+				console.log("las play list");
+				console.log(response);
+			})
 		}
 	</script>
 </body>
