@@ -93,7 +93,7 @@
 		}
 
 		function getPlaylists(){
-			DZ.api('/user/me/playlists?access_token=nyjSVdTuAlEVyYPBNcMmRKBN3hc2zwfrcWxmzujODOS2x6QTQd6',function(response){
+			DZ.api('/user/me/playlists',function(response){
 				console.log("las play list");
 				console.log(response);
 				playlists = response.data;
@@ -102,7 +102,7 @@
 			})
 		}
 		function getFavorites(){
-			DZ.api('/user/me/tracks?access_token=nyjSVdTuAlEVyYPBNcMmRKBN3hc2zwfrcWxmzujODOS2x6QTQd6',function(response){
+			DZ.api('/user/me/tracks',function(response){
 				console.log("las favoritas");
 				console.log(response);
 
